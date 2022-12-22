@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000000;
+  color: white;
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+nav,
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  font-size: 2rem;
+}
+
+.btn-login {
+  width: 20vw;
+  background: #ffd51c;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: 0.3s;
+  border-style: none;
+}
+.btn-login a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  font-size: 1.5rem;
+  background: #ffffff;
+  color: #ffd51c;
+}
+
+/* Judul */
+
+.header-title {
+  margin: auto;
+  font-size: 10vw;
+  position: relative;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.header-title {
+  color: #ffd51c;
+  margin: auto;
+  font-size: 1;
+  position: relative;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.today-date {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.today-date span {
+  font-size: 1.5rem;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+
+.social-media li a {
+  color: white;
+}
+
+/* About Section */
+
+#about {
+  width: 100%;
+  padding: 2.5rem, 0;
+}
+.about-info {
+  padding: 2rem;
+}
+.about-info p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.about-info h2 {
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.about-info h3 {
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.about-container {
+  padding: 2rem;
+  width: 70vw;
+  margin: auto auto;
+}
+
+.img-gallery {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image-box {
+  width: 22%;
+  height: 250px;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.image-box:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.image-box img:hover {
+  opacity: 0.5;
+}
+.nat {
+  position: absolute;
+  color: #ffd51c;
+  bottom: -7%;
+  left: 50%;
+  font-style: italic;
+}
+
+.natgeo {
+  color: #ffd51c;
+}
+/* GeoNext */
+#geonext {
+  padding: 3rem;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.geonext p {
+  font-size: 2rem;
+}
+.geonext .bttn {
+  border-radius: 50px;
+  background-color: #ffd51c;
+}
+#geonext:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+/* Responsivity */
+
+@media only screen and (max-width: 950px) {
+  .about-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .today-date {
+    display: none;
+  }
+  .social-media {
+    width: 100%;
+  }
+  .image-gallery {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .image-box {
+    width: 100%;
+    height: 400px;
+    margin: 1rem, 0;
+  }
+  .nat {
+    display: none;
+  }
+}
+#slider h1 {
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+#slider p {
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  padding-top: 5rem;
+}
+.site-footer {
+  background-color: #000000;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+}
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr.small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: #ffd51c;
+  text-decoration: none;
+}
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-links li {
+  display: block;
+}
+.footer-links a {
+  color: #737373;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #ffd51c;
+  text-decoration: none;
+}
+.footer-links.inline li {
+  display: inline-block;
+}
+.site-footer .social-icons {
+  text-align: right;
+}
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+.copyright-text {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #ffd51c;
+}
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+.social-icons a.facebook:hover {
+  background-color: #ffd51c;
+}
+.social-icons a.twitter:hover {
+  background-color: #ffd51c;
+}
+.social-icons a.linkedin:hover {
+  background-color: #ffd51c;
+}
+.social-icons a.dribbble:hover {
+  background-color: #ffd51c;
+}
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
